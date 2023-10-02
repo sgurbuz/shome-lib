@@ -2,7 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@sg-home/*": [
+        "./dist/sg-home/*",
+        "./projects/sg-home/*/src/public-api"
+      ]
+    },
     "baseUrl": "./",
+    "strictPropertyInitialization": false,
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

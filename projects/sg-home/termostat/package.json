@@ -1,0 +1,32 @@
+{
+  "name": "@sg-home/termostat",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "description": "Termostat Module is an Angular Component for Smart Home Applications.",
+  "author": {
+    "email": "serhangurbuz@gmail.com",
+    "name": "Serhan Gürbüz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sgurbuz/shome-lib.git"
+  },
+  "keywords": [
+    "termostat",
+    "component",
+    "heating",
+    "cooling",
+    "responsive",
+    "smart",
+    "home",
+    "angular"
+  ],
+  "license": "MIT"
+}

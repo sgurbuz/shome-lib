@@ -1,27 +1,14 @@
-# ShomeLib
+# Smart Home Library Testing Tool
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+Run `npm run start` for quick start of the project. It will install required npm packages automatically and then build the termostat library then serve the application on port <code>5548</code>.
 
-## Development server
+To operate the process manually:
+1. Open project folder in your OS Command Line
+2. Run `npm install`.
+3. Run `ng build @sg-home/termostat --configuration production`.
+4. Run `ng serve`.
+5. Then you can browse the app at [http://localhost:5548] http://localhost:5548.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+For more info please mail to serhangurbuz@gmail.com.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

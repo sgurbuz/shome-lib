@@ -1,0 +1,189 @@
+:host ::ng-deep {
+    .termostat-base {
+        position: relative;
+        width: 14em;
+        height: 14em;
+        border-radius: 50%;
+        border: solid 0.25em #dbdbdb;
+        margin: 5em auto;
+        background: #f5f5f5;
+        background: linear-gradient(#fff, #f5f5f5);
+        font-family: 'Saira', sans-serif;
+        -webkit-font-smoothing: antialiased;
+
+        .min,
+        .max {
+            display: block;
+            color: rgba(0, 0, 0, 0.75);
+            text-transform: uppercase;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            position: absolute;
+            opacity: 0.75;
+            font-family: 'Saira', sans-serif;
+        }
+
+        .min {
+            bottom: -1em;
+            left: -1.5em;
+        }
+        
+        .max {
+            bottom: -1em;
+            right: -1.5em;
+        }
+
+        .tick {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            overflow: visible;
+    
+            &::after {
+                content: "";
+                width: 0.08em;
+                height: 0.6em;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                top: -1.5em;
+                left: 50%;
+                -webkit-transition: all 180ms ease-out;
+                -moz-transition: all 180ms ease-out;
+                -o-transition: all 180ms ease-out;
+                transition: all 180ms ease-out;
+            }
+    
+            &.activetick {
+                &::after {
+                    background-color:  rgba(0, 0, 0, 0.35);
+                    -webkit-box-shadow: 0 0 0.3em 0.08em  rgba(0, 0, 0, 0.35);
+                    -moz-box-shadow: 0 0 0.3em 0.08em  rgba(0, 0, 0, 0.35);
+                    box-shadow: 0 0 0.3em 0.08em rgba(0, 0, 0, 0.35);
+                    -webkit-transition: all 50ms ease-in;
+                    -moz-transition: all 50ms ease-in;
+                    -o-transition: all 50ms ease-in;
+                    transition: all 50ms ease-in;
+                }
+            }
+        }
+
+        .termostat {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: all 180ms ease-out;
+            -moz-transition: all 180ms ease-out;
+            -o-transition: all 180ms ease-out;
+            transition: all 180ms ease-out;
+            z-index: 10;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 19%;
+                left: 19%;
+                width: 3%;
+                height: 3%;
+                background-color: rgba(0, 0, 0, 0.35);
+                border-radius: 50%;
+                -webkit-box-shadow: 0 0 0.4em 0 rgba(0, 0, 0, 0.35);
+                -moz-box-shadow: 0 0 0.4em 0 rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 0.4em 0 rgba(0, 0, 0, 0.35);
+                -webkit-transition: all 180ms ease-out;
+                -moz-transition: all 180ms ease-out;
+                -o-transition: all 180ms ease-out;
+                transition: all 180ms ease-out;
+            }
+        }
+
+        .info-section {
+            position: absolute;
+            bottom: -6em;
+            font-family: 'Saira', sans-serif;
+            width: 100%;
+
+            .current-temp {
+                font-size: 48px;
+            }
+
+            .feedback {
+                padding-top: 8px;
+                color: rgba(0, 0, 0, 0.5);
+                height: 28px;
+            }
+        }
+
+        &.cooling {
+            .termostat {
+                &::before {
+                    background-color: #a8d8f8;
+                    -webkit-box-shadow: 0 0 0.4em 0 #79c3f4;
+                    -moz-box-shadow: 0 0 0.4em 0 #79c3f4;
+                    box-shadow: 0 0 0.4em 0 #79c3f4;
+                }
+            }
+
+            .tick {
+                 &.activetick {
+                    &::after {
+                        background-color: #a8d8f8;
+                        -webkit-box-shadow: 0 0 0.3em 0.08em #79c3f4;
+                        -moz-box-shadow: 0 0 0.3em 0.08em #79c3f4;
+                        box-shadow: 0 0 0.3em 0.08em #79c3f4;
+                    }
+                }
+            }
+
+            .info-section {
+               .current-temp {
+                    color: #79c3f4;
+                }
+    
+                .feedback {
+                    color: #79c3f4;
+                }
+            }
+        }
+
+        &.heating {
+            .termostat {
+                &::before {
+                    background-color: #ff5842;
+                    -webkit-box-shadow: 0 0 0.4em 0 #ff5842;
+                    -moz-box-shadow: 0 0 0.4em 0 #ff5842;
+                    box-shadow: 0 0 0.4em 0 #ff5842;
+                }
+            }
+
+            .tick {
+                 &.activetick {
+                    &::after {
+                        background-color: #ff5842;
+                        -webkit-box-shadow: 0 0 0.3em 0.08em #ff5842;
+                        -moz-box-shadow: 0 0 0.3em 0.08em #ff5842;
+                        box-shadow: 0 0 0.3em 0.08em #ff5842;
+                    }
+                }
+            }
+
+            .info-section {
+                .current-temp {
+                     color: #ff5842;
+                 }
+     
+                 .feedback {
+                     color: #ff5842;
+                 }
+             }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<div class="termostat-base {{weatherClass}}">
+    <div id="knob" class="termostat" [style.transform]="'rotate(' + rotationDeg +'deg)'"></div>
+    <span class="min">{{minTemp}}<sup>o</sup>C</span>
+    <span class="max">{{maxTemp}}<sup>o</sup>C</span>
+    <div #tickContainer class="ticks"></div>
+    <div class="info-section">
+        <div class="current-temp">{{currentTemp}}<sup>o</sup>C</div>
+        <div class="feedback">{{weatherInfo}}</div>
+    </div>
+</div>

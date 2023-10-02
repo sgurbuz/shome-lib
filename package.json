@@ -1,20 +1,31 @@
 {
   "name": "shome-lib",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": {
+    "email": "serhangurbuz@gmail.com",
+    "name": "Serhan Gürbüz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sgurbuz/shome-lib.git"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm install && ng build @sg-home/termostat --configuration production && ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lib": "ng g library @sg-home/${npm_config_lib} --prefix=sg-home"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^16.2.0",
+    "@angular/animations": "^16.2.7",
+    "@angular/cdk": "~16.2.6",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
+    "@angular/material": "^16.2.6",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
@@ -33,6 +44,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^16.2.0",
     "typescript": "~5.1.3"
   }
 }
